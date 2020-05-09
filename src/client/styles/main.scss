@@ -31,8 +31,9 @@ main {
     background-image:
         linear-gradient(to bottom right, #f9f9fa47, #f7f7f899),
         url(../media/amphitheater-ancient-arch-architecture-397431.jpg);
+    background-position: right;
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -141,8 +142,8 @@ header {
     display: flex;
     flex-direction: column;
     padding: 2rem 3rem;
-    min-width: 30vw;
-    max-width: 40vw;
+    min-width: 25rem;
+    max-width: 40rem;
     max-height: 80vh;
     background: $bacground-transparent;
     border-radius: .4rem;
@@ -168,6 +169,7 @@ header {
     padding: 1rem;
     .card-trip {
         display: grid;
+        position: relative;
         grid-template-columns: 25% 1fr;
         column-gap: 1rem;
         margin-bottom: .8rem;
@@ -193,7 +195,19 @@ header {
     }
 }
 
-/********************************** Phone */
-@media(max-width: 576px) {
+/********************************** Phone && Tablet */
+@media(max-width: 1041px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-holder {
+        margin: 1rem auto;
+    }
+
+    .card-trip {
+        grid-template-columns: 1fr !important;
+    }
 
 }
