@@ -24,7 +24,9 @@ The structure of the project is as below:
         - application.js 
         - service.js 
         - service.spec.js 
-      - styles folder
+      - media
+        -*.png
+      - styles
         - _variables.scss 
         - main.scss 
         - popup.scss 
