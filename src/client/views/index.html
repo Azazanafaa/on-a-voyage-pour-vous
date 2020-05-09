@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>On a voyagé pour Vous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,600;0,700;1,200;1,300;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <form class="" onsubmit="return handleSubmit(event)">
+
+    </form>
+
+    <main>
+        <section class="form-holder">
+            <header>
+                <p>
+                    Plan your trip with <strong>On a voyagé pour Vous</strong> and get to make some friends
+                </p>
+            </header>
+            <div class="form-section">
+                <div class="name"></div>
+                <label for="city-name">City Name: </label>
+                <input id="city-name" type="text" placeholder="City Name" required>
+            </div>
+            <div class="form-section">
+                <div class="departure"></div>
+                <label for="city-name">Departure date: </label>
+                <input id="depart-date" type="date" required>
+            </div>
+            <div class="form-section">
+                <div class="return"></div>
+                <label for="city-name">Return date: </label>
+                <input id="return-date" type="date">
+            </div>
+            <span class="error-dates">Please enter Valid Dates</span>
+            <button class="search" onclick="return Client.handleSubmit(event)"
+                onsubmit="return Client.handleSubmit(event)">Plan trip</button>
+        </section>
+
+        <section class="results-holder">
+            <h1 class="results-header">Your trips</h1>
+            <div class="cards-holder">
+            </div>
+        </section>
+        <div class="modal">
+            <div class="modal-content">
+                <span onclick="return Client.closePopUp()" class="close">&times;</span>
+                <div class="modal-body">
+                    <img src="https://cdn.pixabay.com/photo/2013/04/11/19/46/louvre-102840_150.jpg" alt="">
+                    <div class="trip-info">
+                        <header>Destination: Paris, France</header>
+                        <div class="trip-date">Departure date: 12/85/1567</div>
+                        <div class="trip-countdown">Paris, France is 215 days</div>
+                        <div class="trip-weather">It will be:</div>
+                        <div class="trip-weather-status">Cloudy</div>
+                        <div class="trip-temp">low: 12 | high: 25</div>   
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-save" onclick="return Client.saveTrip()">Save Trip</button>
+                    <button class="btn-cancel" onclick="return Client.closePopUp()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!--  <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script> -->
+</body>
+
+</html>
